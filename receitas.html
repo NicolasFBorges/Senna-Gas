@@ -6,7 +6,7 @@
     <meta name="description" content="Receitas especiais da Senna Gás - Aprenda a preparar deliciosos pratos usando gás de qualidade">
     <title>Receitas - Senna Gás</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?version=3">
+    <link rel="stylesheet" href="styles.css?version=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -27,57 +27,140 @@
 
     <main>
         <section class="recipes-page">
-            <h1>Nossas Receitas</h1>
-            <div class="recipes-filters">
-                <button class="filter-btn active" data-filter="todas">Todas</button>
-                <button class="filter-btn" data-filter="carnes">Carnes</button>
-                <button class="filter-btn" data-filter="massas">Massas</button>
-                <button class="filter-btn" data-filter="veganas">Veganas</button>
-                <button class="filter-btn" data-filter="doces">Doces</button>
-            </div>
+            <div class="recipes">
+                <h1>Nossas Receitas</h1>
+                <div class="recipes-filters">
+                    <button class="filter-btn active" data-filter="todas">Todas</button>
+                    <button class="filter-btn" data-filter="carnes">Carnes</button>
+                    <button class="filter-btn" data-filter="massas">Massas</button>
+                    <button class="filter-btn" data-filter="veganas">Veganas</button>
+                    <button class="filter-btn" data-filter="doces">Doces</button>
+                </div>
 
-            <div class="recipes-grid">
-                <article class="recipe-card" data-category="veganas">
-                    <img src="png receitas/pizza vegana.png" alt="Pizza Vegana" loading="lazy">
-                    <div class="recipe-info">
-                        <h2>Pizza Vegana</h2>
-                        <div class="recipe-meta">
-                            <span><i class="far fa-clock"></i> 45 min</span>
-                            <span><i class="fas fa-utensils"></i> Fácil</span>
-                            <span><i class="fas fa-users"></i> 4 porções</span>
+                <div class="recipes-grid">
+                    <article class="recipe-card" data-category="veganas">
+                        <img src="png receitas/pizza vegana.png" alt="Pizza Vegana" loading="lazy">
+                        <div class="recipe-info">
+                            <h2>Pizza Vegana</h2>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 45 min</span>
+                                <span><i class="fas fa-utensils"></i> Fácil</span>
+                                <span><i class="fas fa-users"></i> 4 porções</span>
+                            </div>
+                            <p class="recipe-description">Uma deliciosa pizza vegana preparada com gás de qualidade</p>
+                            <div class="recipe-content">
+                                <h3>Ingredientes</h3>
+                                <ul>
+                                    <li>2 xícaras de farinha de trigo</li>
+                                    <li>1 colher de sopa de fermento biológico</li>
+                                    <li>1 colher de chá de sal</li>
+                                    <li>1 colher de sopa de azeite</li>
+                                    <li>1 xícara de água morna</li>
+                                    <li>Molho de tomate a gosto</li>
+                                    <li>Queijo vegano ralado</li>
+                                    <li>Legumes e verduras de sua preferência</li>
+                                </ul>
+                                <h3>Modo de Preparo</h3>
+                                <ol>
+                                    <li>Misture a farinha, fermento e sal em uma tigela</li>
+                                    <li>Adicione o azeite e a água morna, misturando até formar uma massa homogênea</li>
+                                    <li>Sove a massa por 10 minutos e deixe descansar por 30 minutos</li>
+                                    <li>Abra a massa com um rolo e coloque em uma forma</li>
+                                    <li>Adicione o molho de tomate e os ingredientes de sua preferência</li>
+                                    <li>Polvilhe o queijo vegano por cima</li>
+                                    <li>Asse em forno pré-aquecido a 200°C por 20-25 minutos</li>
+                                </ol>
+                                <div class="recipe-tips">
+                                    <h4>Dicas</h4>
+                                    <p>Para uma massa mais crocante, deixe assar por mais tempo. Você pode usar qualquer tipo de legume ou verdura como cobertura.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p>Uma deliciosa pizza vegana preparada com gás de qualidade</p>
-                        <a href="receitas/pizza-vegana.html" class="btn-recipe">Ver Receita</a>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="recipe-card" data-category="carnes">
-                    <img src="png receitas/bobó de camarão.png" alt="Bobó de Camarão" loading="lazy">
-                    <div class="recipe-info">
-                        <h2>Bobó de Camarão</h2>
-                        <div class="recipe-meta">
-                            <span><i class="far fa-clock"></i> 1h 30min</span>
-                            <span><i class="fas fa-utensils"></i> Médio</span>
-                            <span><i class="fas fa-users"></i> 6 porções</span>
+                    <article class="recipe-card" data-category="carnes">
+                        <img src="png receitas/bobó de camarão.png" alt="Bobó de Camarão" loading="lazy">
+                        <div class="recipe-info">
+                            <h2>Bobó de Camarão</h2>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 1h 30min</span>
+                                <span><i class="fas fa-utensils"></i> Médio</span>
+                                <span><i class="fas fa-users"></i> 6 porções</span>
+                            </div>
+                            <p class="recipe-description">Um clássico da culinária brasileira preparado com gás</p>
+                            <div class="recipe-content">
+                                <h3>Ingredientes</h3>
+                                <ul>
+                                    <li>1 kg de camarão médio</li>
+                                    <li>2 cebolas médias picadas</li>
+                                    <li>4 dentes de alho picados</li>
+                                    <li>2 pimentões vermelhos picados</li>
+                                    <li>1 kg de mandioca cozida</li>
+                                    <li>400ml de leite de coco</li>
+                                    <li>2 colheres de sopa de azeite de dendê</li>
+                                    <li>Sal e pimenta a gosto</li>
+                                    <li>Coentro picado para decorar</li>
+                                </ul>
+                                <h3>Modo de Preparo</h3>
+                                <ol>
+                                    <li>Refogue a cebola e o alho no azeite até dourarem</li>
+                                    <li>Adicione o pimentão e refogue por mais 2 minutos</li>
+                                    <li>Acrescente o camarão e refogue até ficar rosado</li>
+                                    <li>Amasse a mandioca cozida e adicione ao refogado</li>
+                                    <li>Adicione o leite de coco e misture bem</li>
+                                    <li>Tempere com sal e pimenta</li>
+                                    <li>Cozinhe em fogo baixo por 15 minutos</li>
+                                    <li>Adicione o azeite de dendê e misture</li>
+                                    <li>Sirva quente, decorado com coentro</li>
+                                </ol>
+                                <div class="recipe-tips">
+                                    <h4>Dicas</h4>
+                                    <p>Para um sabor mais intenso, deixe o camarão marinar por 30 minutos com limão e sal antes de cozinhar.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p>Um clássico da culinária brasileira preparado com gás</p>
-                        <a href="receitas/bobo-camarao.html" class="btn-recipe">Ver Receita</a>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="recipe-card" data-category="carnes">
-                    <img src="png receitas/frango assado.png" alt="Frango Assado" loading="lazy">
-                    <div class="recipe-info">
-                        <h2>Frango Assado</h2>
-                        <div class="recipe-meta">
-                            <span><i class="far fa-clock"></i> 2h</span>
-                            <span><i class="fas fa-utensils"></i> Fácil</span>
-                            <span><i class="fas fa-users"></i> 4 porções</span>
+                    <article class="recipe-card" data-category="carnes">
+                        <img src="png receitas/frango assado.png" alt="Frango Assado" loading="lazy">
+                        <div class="recipe-info">
+                            <h2>Frango Assado</h2>
+                            <div class="recipe-meta">
+                                <span><i class="far fa-clock"></i> 2h</span>
+                                <span><i class="fas fa-utensils"></i> Fácil</span>
+                                <span><i class="fas fa-users"></i> 4 porções</span>
+                            </div>
+                            <p class="recipe-description">Frango assado perfeito graças ao gás de qualidade</p>
+                            <div class="recipe-content">
+                                <h3>Ingredientes</h3>
+                                <ul>
+                                    <li>1 frango inteiro (aproximadamente 2kg)</li>
+                                    <li>4 dentes de alho picados</li>
+                                    <li>2 colheres de sopa de manteiga</li>
+                                    <li>1 limão</li>
+                                    <li>Sal e pimenta a gosto</li>
+                                    <li>Ervas frescas (salsinha, tomilho, alecrim)</li>
+                                    <li>2 colheres de sopa de azeite</li>
+                                </ul>
+                                <h3>Modo de Preparo</h3>
+                                <ol>
+                                    <li>Lave bem o frango e seque com papel toalha</li>
+                                    <li>Misture o alho, manteiga, suco de limão, sal e pimenta</li>
+                                    <li>Passe a mistura por dentro e por fora do frango</li>
+                                    <li>Coloque as ervas frescas dentro da cavidade do frango</li>
+                                    <li>Regue com azeite por cima</li>
+                                    <li>Asse em forno pré-aquecido a 180°C por aproximadamente 1h30</li>
+                                    <li>Vire o frango na metade do tempo de cozimento</li>
+                                    <li>Sirva com legumes assados ou arroz</li>
+                                </ol>
+                                <div class="recipe-tips">
+                                    <h4>Dicas</h4>
+                                    <p>Para um frango mais suculento, deixe marinar por algumas horas antes de assar. A temperatura do forno é crucial para um assado perfeito.</p>
+                                </div>
+                            </div>
                         </div>
-                        <p>Frango assado perfeito graças ao gás de qualidade</p>
-                        <a href="receitas/frango-assado.html" class="btn-recipe">Ver Receita</a>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
