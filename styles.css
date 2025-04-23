@@ -98,6 +98,12 @@ nav a:hover {
 
 /* Mobile Header Styles */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -129,11 +135,14 @@ nav a:hover {
         padding: 80px 2rem 2rem;
         transition: var(--transition);
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        margin-left: 0;
+        visibility: hidden;
+        opacity: 0;
     }
 
     nav.active {
         right: 0;
+        visibility: visible;
+        opacity: 1;
     }
 
     nav ul {
@@ -303,6 +312,15 @@ footer {
 @media (max-width: 768px) {
     .social-content {
         grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .recipes, .instagram {
+        width: 100%;
+    }
+
+    .instagram iframe {
+        height: 600px;
     }
 
     .slide img {
