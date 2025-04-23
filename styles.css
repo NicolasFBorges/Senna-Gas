@@ -313,14 +313,40 @@ footer {
     .social-content {
         grid-template-columns: 1fr;
         padding: 2rem 1rem;
+        width: 100%;
+        margin: 0;
+        gap: 1rem;
     }
 
     .recipes, .instagram {
         width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .recipes-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    .recipe-category {
+        margin: 0.25rem;
     }
 
     .instagram iframe {
         height: 600px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slideshow-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .slide img {
@@ -381,6 +407,8 @@ footer {
     padding: 4rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Recipes Section */
@@ -392,6 +420,8 @@ footer {
     max-width: 1180px;
     margin: 0 auto;
     width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .recipes h2 {
