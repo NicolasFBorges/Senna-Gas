@@ -18,16 +18,23 @@
 </head>
 <body>
     <header>
-        <a href="#home" aria-label="Senna Gás - Página Inicial">
-            <img src="SENNA_GAS_LOGO.png" alt="Senna Gás" width="180" height="60" loading="eager">
-        </a>
-        <nav aria-label="Navegação principal">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <a href="https://api.whatsapp.com/send?phone=5564999095817" target="_blank">Contato</a>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <a href="#home" aria-label="Senna Gás - Página Inicial">
+                <img src="SENNA_GAS_LOGO.png" alt="Senna Gás" width="180" height="60" loading="eager" class="logo">
+            </a>
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=5564999095817" target="_blank">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
     <main>
@@ -184,6 +191,19 @@
         const slides = document.getElementsByClassName("slide");
         const dots = document.getElementsByClassName("dot");
         let slideInterval;
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        // Função para controlar a visibilidade do header ao rolar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
 
         function showSlides() {
             // Esconde todos os slides
@@ -267,6 +287,38 @@
                 slideIndex = 0;
                 showSlides();
                 slideInterval = setInterval(showSlides, 10000);
+            });
+        });
+
+        // Menu toggle functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const body = document.body;
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+            body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (nav.classList.contains('active') && 
+                !nav.contains(e.target) && 
+                !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                body.style.overflow = '';
             });
         });
     </script>
