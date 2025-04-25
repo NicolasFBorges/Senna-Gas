@@ -25,6 +25,12 @@ body {
     background-color: var(--light-bg);
 }
 
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 /* Header */
 header {
     background-color: var(--primary-color);
