@@ -180,29 +180,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-        // Filtro de receitas
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const recipeCards = document.querySelectorAll('.recipe-card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                const filter = button.dataset.filter;
-
-                recipeCards.forEach(card => {
-                    if (filter === 'todas' || card.dataset.category === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html> 
