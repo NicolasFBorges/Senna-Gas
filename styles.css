@@ -498,10 +498,36 @@ nav a:hover {
         text-align: center;
         flex-wrap: wrap;
     }
+
+    .recipes-links {
+        gap: 0.5rem;
+    }
+
+    .recipe-category {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .recipe-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tip-card {
+        padding: 1.5rem;
+    }
+
+    .recipe-meta span {
+        font-size: 0.9rem;
+    }
 }
 
-/* Small devices (portrait tablets and large phones, 600px to 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
     .hero {
         min-height: 100vh;
         padding: 3rem 1.5rem;
@@ -528,8 +554,8 @@ nav a:hover {
     }
 }
 
-/* Medium devices (landscape tablets, 768px to 992px) */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
     .hero {
         min-height: 90vh;
     }
@@ -553,10 +579,48 @@ nav a:hover {
         font-size: 1.8rem;
         margin-bottom: 5rem;
     }
+
+    .recipes-section,
+    .instagram-section {
+        display: inline-block;
+        width: calc(50% - 2rem);
+        vertical-align: top;
+    }
+
+    .recipes-section {
+        margin-right: 2rem;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 3.8rem;
+        margin-left: 15%;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+
+    .hero-text {
+        margin-left: 15%;
+    }
+
+    .hero-subtitle {
+        font-size: 2.3rem;
+    }
+
+    .hero-description {
+        font-size: 2rem;
+        margin-bottom: 6rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
     .hero {
         min-height: 90vh;
     }
@@ -582,29 +646,7 @@ nav a:hover {
     }
 }
 
-/* Ajustes para telas muito pequenas */
-@media only screen and (max-width: 360px) {
-    .hero h1 {
-        font-size: 2rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .hero-description {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-    }
-
-    .hero-address {
-        font-size: 0.9rem;
-    }
-}
-
-/* Ajustes para altura da tela */
+/* Ajustes específicos para altura da tela */
 @media screen and (max-height: 700px) {
     .hero {
         min-height: 120vh;
