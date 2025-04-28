@@ -189,12 +189,16 @@ nav a:hover {
     position: relative;
 }
 
+.hero, .hero * {
+    font-weight: 700 !important;
+}
+
 .hero h1 {
+    text-transform: uppercase;
     font-size: 4rem;
     margin-left: 15%;
     margin-top: 10rem;
     margin-bottom: 10rem;
-    font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
 }
@@ -264,7 +268,8 @@ nav a:hover {
     object-fit: cover;
 }
 
-.product h2 {
+.product h3 {
+    text-align: center;
     font-size: 1.5rem;
     margin: 1rem;
     color: var(--primary-color);
@@ -405,6 +410,13 @@ nav a:hover {
 .btn-more:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+.instagram h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2rem;
 }
 
 /* Tips Section */
