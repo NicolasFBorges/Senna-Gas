@@ -1260,7 +1260,7 @@ nav a:hover {
     display: inline-flex; /* Use inline-flex for alignment */
     align-items: center; /* Vertically align icon and text */
     gap: 0.5rem; /* Space between icon and text */
-    background-color: #25d366; /* WhatsApp green */
+    background-color: var(--secondary-color); /* WhatsApp green */
     color: var(--white);
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
@@ -1272,7 +1272,7 @@ nav a:hover {
 }
 
 .btn-pedido:hover {
-    background-color: #128C7E; /* Darker WhatsApp green */
+    background-color: var(--primary-color); /* Darker WhatsApp green */
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -1701,7 +1701,7 @@ footer p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25d366;
+    background-color: var(--secondary-color);
     color: var(--white);
     width: 60px;
     height: 60px;
@@ -1715,6 +1715,7 @@ footer p {
 }
 
 .whatsapp-button:hover {
+    background-color: var(--primary-color);
     transform: scale(1.1);
 }
 
