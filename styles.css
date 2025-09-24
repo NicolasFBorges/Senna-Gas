@@ -280,6 +280,23 @@ nav a:hover {
     color: var(--text-color);
 }
 
+/* Equalize product card button placement and size */
+.products .product {
+    display: flex;
+    flex-direction: column;
+}
+
+.products .product .btn-pedido {
+    margin: 0 1rem 1.5rem;
+    width: auto;
+    min-height: 56px; /* same height across cards */
+    justify-content: center; /* center icon + text */
+}
+
+.products .product h3 + p + .btn-pedido {
+    margin-top: auto; /* push button to bottom */
+}
+
 .products-title {
     text-align: center;
     margin-bottom: 0.5rem;
